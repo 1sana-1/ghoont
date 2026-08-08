@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GHOONT — घूंट — matcha, hojicha, ube</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400..800&family=Tiro+Devanagari+Hindi&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --rose:#e7a3ac; --blush:#f4d3d6; --deeprose:#a8394f;
+  --terra:#c05b3e; --teal:#1e6e68; --gold:#cf9a3c;
+  --cream:#fbf2e4; --ink:#3a1c22;
+  --srf:"Bodoni Moda",Georgia,serif;
+  --dev:"Tiro Devanagari Hindi",Georgia,serif;
+  --sans:"Jost",system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);font-weight:400;color:var(--ink);background:var(--cream);-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:2px solid var(--deeprose);outline-offset:4px}
+.wrap{max-width:1180px;margin:0 auto;padding:0 clamp(1.1rem,4vw,3rem)}
+section{padding:clamp(3rem,8vw,6.5rem) 0}
+
+h1,h2,h3,h4,.srf{font-family:var(--srf);font-weight:500;line-height:1.05;letter-spacing:-.01em}
+.dv{font-family:var(--dev)}
+.eb{font-family:var(--sans);font-weight:500;font-size:.66rem;text-transform:uppercase;letter-spacing:.3em;opacity:.62}
+h2.big{font-size:clamp(2.1rem,6.2vw,4.2rem);font-weight:400}
+h2.big em{font-style:italic;color:var(--deeprose)}
+
+/* block print band */
+.band{height:34px;background-repeat:repeat-x;background-size:44px 34px;background-color:var(--deeprose);
+background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='44' height='34'%3E%3Cg fill='none' stroke='%23fbf2e4' stroke-width='1.3'%3E%3Ccircle cx='22' cy='17' r='4.5'/%3E%3Cpath d='M22 5 q4 6 0 7.5 q-4-1.5 0-7.5Z' fill='%23fbf2e4' stroke='none'/%3E%3Cpath d='M22 29 q4-6 0-7.5 q-4 1.5 0 7.5Z' fill='%23fbf2e4' stroke='none'/%3E%3Cpath d='M10 17 q6 4 7.5 0 q-1.5-4-7.5 0Z' fill='%23fbf2e4' stroke='none'/%3E%3Cpath d='M34 17 q-6 4-7.5 0 q1.5-4 7.5 0Z' fill='%23fbf2e4' stroke='none'/%3E%3Ccircle cx='0' cy='17' r='2'  fill='%23cf9a3c' stroke='none'/%3E%3Ccircle cx='44' cy='17' r='2' fill='%23cf9a3c' stroke='none'/%3E%3C/g%3E%3C/svg%3E")}
+
+.ann{background:var(--ink);color:var(--blush);overflow:hidden;white-space:nowrap;padding:.6rem 0}
+.ann span{display:inline-block;font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;padding-right:2.6rem;animation:sl 34s linear infinite}
+@keyframes sl{to{transform:translateX(-50%)}}
+@media(prefers-reduced-motion:reduce){.ann span{animation:none}}
+
+header{position:sticky;top:0;z-index:50;background:var(--cream);border-bottom:1px solid rgba(58,28,34,.2)}
+.hdr{display:flex;align-items:center;justify-content:space-between;padding:.9rem 0;gap:1.4rem}
+.mark{display:flex;flex-direction:column;line-height:1}
+.mark .l{font-family:var(--srf);font-weight:600;font-size:1.5rem;letter-spacing:.04em;text-transform:uppercase}
+.mark .d{font-family:var(--dev);font-size:.95rem;color:var(--deeprose);margin-top:2px}
+nav.mn{display:flex;gap:1.7rem;font-size:.72rem;font-weight:500;text-transform:uppercase;letter-spacing:.16em}
+@media(max-width:900px){nav.mn{display:none}}
+.bag{background:transparent;color:var(--ink);border:1px solid var(--ink);padding:.6rem 1.2rem;font-family:var(--sans);font-weight:500;font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;cursor:pointer;transition:.18s}
+.bag:hover{background:var(--ink);color:var(--cream)}
+
+/* hero */
+.hero{background:linear-gradient(180deg,var(--blush) 0%,var(--rose) 100%);position:relative;overflow:hidden}
+.harch{max-width:660px;margin:0 auto;text-align:center;padding:clamp(2.6rem,7vw,4.5rem) 1.5rem clamp(3rem,7vw,4.5rem);
+background:var(--cream);border:1px solid var(--ink);border-radius:330px 330px 6px 6px;position:relative}
+.harch:before{content:"";position:absolute;inset:11px;border:1px solid rgba(58,28,34,.35);border-radius:320px 320px 3px 3px;pointer-events:none}
+.padharo{font-family:var(--dev);font-size:clamp(1rem,2.8vw,1.4rem);color:var(--deeprose);letter-spacing:.04em}
+.hero h1{font-size:clamp(2.9rem,10vw,6.2rem);font-weight:400;letter-spacing:.06em;text-transform:uppercase;margin:.5rem 0 .1rem}
+.hdev{font-family:var(--dev);font-size:clamp(1.7rem,6vw,3.2rem);color:var(--deeprose);line-height:1.2}
+.hrule{width:64px;height:1px;background:var(--gold);margin:1.4rem auto}
+.hero p{font-size:clamp(.95rem,2vw,1.12rem);line-height:1.7;max-width:40ch;margin:0 auto;opacity:.82}
+.btn{display:inline-block;background:var(--ink);color:var(--cream);padding:.95rem 2.3rem;font-weight:500;font-size:.71rem;letter-spacing:.2em;text-transform:uppercase;margin-top:1.8rem;transition:background .18s}
+.btn:hover{background:var(--deeprose)}
+.hero .strip{display:grid;grid-template-columns:repeat(3,1fr);max-width:660px;margin:2.2rem auto 0;gap:1px;background:rgba(58,28,34,.25)}
+.hs{background:var(--cream);padding:.9rem;text-align:center}
+.hs .d{font-family:var(--dev);color:var(--deeprose);font-size:1.05rem}
+.hs .e{font-family:var(--srf);font-size:.9rem;letter-spacing:.1em;text-transform:uppercase;margin-top:.2rem}
+
+/* range */
+.rh{text-align:center;max-width:46ch;margin:0 auto 3rem}
+.rh p{margin-top:1rem;opacity:.72;line-height:1.7;font-size:.94rem}
+.pg{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:clamp(1.2rem,3vw,2.2rem)}
+.card{display:flex;flex-direction:column}
+.arch{aspect-ratio:3/4;border:1px solid var(--ink);border-radius:200px 200px 4px 4px;position:relative;display:flex;align-items:center;justify-content:center;overflow:hidden;transition:transform .22s}
+.card:hover .arch{transform:translateY(-6px)}
+.arch:before{content:"";position:absolute;inset:9px;border:1px solid rgba(58,28,34,.32);border-radius:192px 192px 2px 2px;pointer-events:none}
+.tin{width:52%;aspect-ratio:5/6;background:rgba(251,242,228,.72);border:1px solid var(--ink);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.15rem}
+.tin .a{font-family:var(--srf);font-weight:600;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase}
+.tin .b{font-family:var(--dev);font-size:.95rem;color:var(--deeprose)}
+.tin .c{font-size:.48rem;letter-spacing:.16em;margin-top:.25rem;opacity:.7}
+.tag{position:absolute;top:1.3rem;left:50%;transform:translateX(-50%);background:var(--ink);color:var(--cream);font-size:.53rem;letter-spacing:.18em;text-transform:uppercase;padding:.28rem .8rem;z-index:2}
+.cb{padding:1.2rem .2rem 0;text-align:center;display:flex;flex-direction:column;flex:1}
+.cb .k{font-size:.58rem;letter-spacing:.18em;text-transform:uppercase;opacity:.55;margin-bottom:.5rem}
+.cb h3{font-size:1.28rem;font-weight:400}
+.cb h3 em{font-family:var(--dev);font-style:normal;font-size:.78rem;color:var(--deeprose);display:block;margin-top:.25rem}
+.cb .d{font-size:.83rem;line-height:1.6;opacity:.72;margin:.7rem 0 1rem;flex:1}
+.cb .pr{font-family:var(--srf);font-size:1.2rem;display:flex;gap:.5rem;justify-content:center;align-items:baseline}
+.cb .pr s{font-family:var(--sans);font-size:.78rem;opacity:.45}
+.add{margin-top:.9rem;background:transparent;border:1px solid var(--ink);padding:.78rem;font-family:var(--sans);font-weight:500;font-size:.66rem;letter-spacing:.2em;text-transform:uppercase;cursor:pointer;transition:.18s}
+.add:hover{background:var(--ink);color:var(--cream)}
+.add.on{background:var(--teal);border-color:var(--teal);color:var(--cream)}
+
+/* brew */
+.brew{background:var(--teal);color:var(--cream)}
+.bg2{display:grid;grid-template-columns:1.05fr 1fr;gap:clamp(2rem,5vw,4.5rem);align-items:center}
+@media(max-width:860px){.bg2{grid-template-columns:1fr}}
+.brew h2.big em{color:var(--rose)}
+.brew .sub{font-family:var(--dev);color:var(--rose);font-size:clamp(1.05rem,2.8vw,1.55rem);margin-top:.7rem;line-height:1.5}
+.brew p{margin-top:1.2rem;max-width:46ch;opacity:.88;line-height:1.75;font-size:.95rem}
+.dial{border:1px solid rgba(251,242,228,.45);padding:clamp(1.4rem,4vw,2.4rem);text-align:center;position:relative}
+.dial:before{content:"";position:absolute;inset:8px;border:1px solid rgba(251,242,228,.2);pointer-events:none}
+.deg{font-family:var(--srf);font-weight:400;font-size:clamp(4rem,13vw,7rem);line-height:1;color:var(--cream)}
+.deg sup{font-size:.24em;vertical-align:super;font-family:var(--sans);letter-spacing:.06em}
+input[type=range]{width:100%;margin:1.5rem 0 1rem;accent-color:var(--rose);height:28px}
+.vd{font-family:var(--srf);font-size:clamp(1.1rem,3vw,1.65rem);letter-spacing:.06em;text-transform:uppercase}
+.vd small{display:block;font-family:var(--sans);font-size:.84rem;letter-spacing:0;text-transform:none;opacity:.8;margin-top:.6rem;line-height:1.6}
+
+/* box */
+.bx{background:var(--blush)}
+.bxg{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,5vw,4rem);align-items:center}
+@media(max-width:860px){.bxg{grid-template-columns:1fr}}
+.bx p{margin-top:1.1rem;max-width:40ch;line-height:1.75;opacity:.8}
+.picks{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.7rem}
+.pick{background:transparent;border:1px solid var(--ink);padding:.62rem 1.15rem;font-family:var(--sans);font-weight:500;font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;cursor:pointer;transition:.16s}
+.pick[aria-pressed=true]{background:var(--deeprose);border-color:var(--deeprose);color:var(--cream)}
+.tot{font-family:var(--srf);font-size:clamp(1.9rem,5vw,2.9rem);margin-top:1.4rem;color:var(--deeprose)}
+.tot small{font-family:var(--sans);font-weight:500;font-size:.66rem;letter-spacing:.18em;text-transform:uppercase;display:block;margin-top:.5rem;color:var(--ink);opacity:.6}
+.q{font-family:var(--dev);font-size:clamp(1.25rem,3.6vw,2rem);line-height:1.5;color:var(--deeprose)}
+.q span{display:block;font-family:var(--srf);font-size:.68em;color:var(--ink);margin-top:.7rem;line-height:1.3;letter-spacing:.04em}
+
+/* receipts */
+.rl{max-width:840px;margin:2.4rem auto 0;border-top:1px solid rgba(58,28,34,.25)}
+.r{display:grid;grid-template-columns:2.4rem 1fr;gap:clamp(1rem,3vw,2rem);padding:1.7rem 0;border-bottom:1px solid rgba(58,28,34,.18)}
+.rn{font-family:var(--dev);font-size:1.05rem;color:var(--gold)}
+.r h4{font-size:1.15rem;font-weight:400}
+.r h4 em{font-family:var(--dev);font-style:normal;font-size:.8rem;color:var(--deeprose);display:block;margin-top:.2rem}
+.r p{font-size:.88rem;line-height:1.7;opacity:.74;margin-top:.5rem}
+
+/* story */
+.st{background:var(--ink);color:var(--blush)}
+.st h2.big{color:var(--cream);max-width:20ch}
+.st h2.big em{color:var(--rose)}
+.stdev{font-family:var(--dev);color:var(--gold);font-size:clamp(1.15rem,3.2vw,1.85rem);margin-top:.8rem;line-height:1.5}
+.sg{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,5vw,4rem);margin-top:1.8rem}
+@media(max-width:860px){.sg{grid-template-columns:1fr}}
+.st p{line-height:1.85;opacity:.82;margin-bottom:1.1rem;font-size:.94rem}
+.st .sig{font-family:var(--srf);color:var(--rose);font-size:1rem;letter-spacing:.08em;margin-top:1.3rem}
+
+footer{background:var(--cream);padding:clamp(2.4rem,5vw,3.6rem) 0 1.8rem;text-align:center}
+.fm .l{font-family:var(--srf);font-weight:400;font-size:clamp(2.4rem,9vw,5rem);letter-spacing:.14em;text-transform:uppercase;opacity:.22}
+.fm .d{font-family:var(--dev);font-size:clamp(1.4rem,5vw,2.6rem);color:var(--deeprose);opacity:.4}
+.fg{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:2rem;margin-top:2.4rem;text-align:left}
+.fg h5{font-size:.6rem;letter-spacing:.22em;text-transform:uppercase;opacity:.5;margin-bottom:.8rem}
+.fg a,.fg p{display:block;font-size:.84rem;margin-bottom:.45rem;opacity:.78}
+.fg a:hover{opacity:1;text-decoration:underline}
+.fb{margin-top:2.2rem;padding-top:1.2rem;border-top:1px solid rgba(58,28,34,.18);font-size:.7rem;opacity:.55;display:flex;justify-content:space-between;flex-wrap:wrap;gap:.7rem;text-align:left}
+</style>
+</head>
+<body>
+
+<div class="ann"><span>₹999 से ऊपर फ्री शिपिंग — grind date on every tin — प्रीपेड पर ३% छूट — lab reports published in full — ₹999 से ऊपर फ्री शिपिंग — grind date on every tin — प्रीपेड पर ३% छूट — lab reports published in full — </span></div>
+
+<header>
+  <div class="wrap hdr">
+    <a class="mark" href="#"><span class="l">Ghoont</span><span class="d">घूंट</span></a>
+    <nav class="mn"><a href="#range">Range</a><a href="#brew">Brewing</a><a href="#box">Build a box</a><a href="#receipts">Receipts</a><a href="#story">Story</a></nav>
+    <button class="bag" id="bag">Bag (0)</button>
+  </div>
+</header>
+
+<div class="band"></div>
+
+<div class="hero"><div class="wrap">
+  <div class="harch">
+    <div class="padharo">पधारो सा</div>
+    <h1>Ghoont</h1>
+    <div class="hdev">घूंट</div>
+    <div class="hrule"></div>
+    <p>One mouthful, made properly. Matcha, hojicha and ube — sourced honestly, dated on the tin, and simple enough that you'll make it twice.</p>
+    <a class="btn" href="#range">Shop the range</a>
+  </div>
+  <div class="strip">
+    <div class="hs"><div class="d">माचा</div><div class="e">Matcha</div></div>
+    <div class="hs"><div class="d">होजिचा</div><div class="e">Hojicha</div></div>
+    <div class="hs"><div class="d">ऊबे</div><div class="e">Ube</div></div>
+  </div>
+</div></div>
+
+<div class="band"></div>
+
+<section id="range"><div class="wrap">
+  <div class="rh">
+    <span class="eb">The range · सामान</span>
+    <h2 class="big" style="margin-top:.6rem">Four tins, <em>and nothing else</em></h2>
+    <p>Every tin is 30g and carries the date it was ground. Ube is a trial size — it takes 10g a drink, so you get three.</p>
+  </div>
+  <div class="pg">
+    <article class="card">
+      <div class="arch" style="background:var(--rose)"><span class="tag">Bestseller</span>
+        <div class="tin"><span class="a">Ghoont</span><span class="b">घूंट</span><span class="c">MATCHA · 30G</span></div></div>
+      <div class="cb"><div class="k">Ceremonial · first harvest</div><h3>Matcha<em>माचा</em></h3>
+        <p class="d">Shizuoka tencha — sweet, thick, proper foam. Fifteen bowls a tin, about ₹80 a cup.</p>
+        <div class="pr">₹1,199 <s>₹1,499</s></div><button class="add">Add to bag</button></div>
+    </article>
+    <article class="card">
+      <div class="arch" style="background:var(--gold)"><span class="tag">Rare in India</span>
+        <div class="tin"><span class="a">Ghoont</span><span class="b">घूंट</span><span class="c">HOJICHA · 30G</span></div></div>
+      <div class="cb"><div class="k">Roasted · low caffeine</div><h3>Hojicha<em>होजिचा</em></h3>
+        <p class="d">Nutty and toasted, almost no caffeine. The one you drink at nine at night.</p>
+        <div class="pr">₹699 <s>₹849</s></div><button class="add">Add to bag</button></div>
+    </article>
+    <article class="card">
+      <div class="arch" style="background:var(--blush)"><span class="tag">New</span>
+        <div class="tin"><span class="a">Ghoont</span><span class="b">घूंट</span><span class="c">UBE · 30G</span></div></div>
+      <div class="cb"><div class="k">Barista grade · Philippines</div><h3>Ube<em>ऊबे</em></h3>
+        <p class="d">Real Kinampay purple yam. Light violet, never dark — dark means sweet potato.</p>
+        <div class="pr">₹799 <s>₹949</s></div><button class="add">Add to bag</button></div>
+    </article>
+    <article class="card">
+      <div class="arch" style="background:var(--terra)"><span class="tag">Gift</span>
+        <div class="tin"><span class="a">Ghoont</span><span class="b">घूंट</span><span class="c">THE KIT</span></div></div>
+      <div class="cb"><div class="k">Whisk · bowl · sieve · scoop</div><h3>The Kit<em>पूरा सेट</em></h3>
+        <p class="d">Bamboo whisk, ceramic bowl, holder, sieve and 30g ceremonial. Nothing missing.</p>
+        <div class="pr">₹2,899 <s>₹3,699</s></div><button class="add">Add to bag</button></div>
+    </article>
+  </div>
+</div></section>
+
+<section id="brew" class="brew"><div class="wrap bg2">
+  <div>
+    <span class="eb" style="opacity:.75">Why yours tasted bad</span>
+    <h2 class="big" style="margin-top:.6rem">It's the water, <em>not the tea</em></h2>
+    <div class="sub">घास जैसा लगता है? ग़लत बना है।</div>
+    <p>Tencha scorches above 85°C and dumps every bitter compound straight into the cup. That's the grassy taste people blame on matcha. Move the dial and watch where it goes wrong.</p>
+  </div>
+  <div class="dial">
+    <div class="deg" id="t">78<sup>°C</sup></div>
+    <input type="range" id="s" min="60" max="100" value="78" step="1" aria-label="Water temperature in Celsius">
+    <div class="vd" id="v">Perfect<small id="vs">Sweet, creamy, thick foam. This is what you paid for.</small></div>
+  </div>
+</div></section>
+
+<section id="box" class="bx"><div class="wrap bxg">
+  <div>
+    <span class="eb" style="color:var(--deeprose)">Build a box · अपना डब्बा</span>
+    <h2 class="big" style="margin-top:.6rem">Pick three, <em>pay for two and a half</em></h2>
+    <p>Any three tins, bundled. Never made this before? Say so at checkout and we'll put a whisk in.</p>
+    <div class="picks">
+      <button class="pick" aria-pressed="false" data-p="1199">Matcha</button>
+      <button class="pick" aria-pressed="false" data-p="699">Hojicha</button>
+      <button class="pick" aria-pressed="false" data-p="799">Ube</button>
+      <button class="pick" aria-pressed="false" data-p="649">Sachets ×10</button>
+    </div>
+    <div class="tot" id="tot">₹0<small>Nothing selected yet</small></div>
+  </div>
+  <div><p class="q">तीन डब्बे, पूरा महीना।<span>Costs less than six café lattes</span></p></div>
+</section>
+
+<div class="band"></div>
+
+<section id="receipts"><div class="wrap">
+  <div class="rh"><span class="eb">Receipts · हिसाब</span><h2 class="big" style="margin-top:.6rem">Four things <em>we'll put in writing</em></h2></div>
+  <div class="rl">
+    <div class="r"><span class="rn">१</span><div><h4>Grind date<em>पिसाई की तारीख़</em></h4><p>On every tin. Matcha oxidises within months — if a brand won't tell you when it was ground, that's usually why.</p></div></div>
+    <div class="r"><span class="rn">२</span><div><h4>Full lab report<em>लैब रिपोर्ट</em></h4><p>Heavy metals, pesticide residue, microbial. Tested independently per batch and published in full, not summarised.</p></div></div>
+    <div class="r"><span class="rn">३</span><div><h4>Honest grade<em>असली ग्रेड</em></h4><p>Culinary powder gets relabelled as ceremonial across this market constantly. Ours states which it actually is.</p></div></div>
+    <div class="r"><span class="rn">४</span><div><h4>What we don't know<em>जो हमें नहीं पता</em></h4><p>Prefecture, harvest year and cultivar where we have them. Where we don't, we say so instead of inventing a story.</p></div></div>
+  </div>
+</div></section>
+
+<section class="st" id="story"><div class="wrap">
+  <span class="eb" style="opacity:.7">The story · कहानी</span>
+  <h2 class="big" style="margin-top:.6rem">Nobody hates matcha. <em>They hate bad matcha.</em></h2>
+  <div class="stdev">एक घूंट, ठीक से बना हुआ।</div>
+  <div class="sg">
+    <div>
+      <p>Three things ruin nearly every cup made at home: boiling water, a culinary grade sold as ceremonial, and powder ground eight months ago by someone who won't say when. None of them are the tea's fault, and all three are fixable.</p>
+      <p>That's the whole brief. Buy properly, date it honestly, and keep explaining the temperature until people stop making the same bad cup twice.</p>
+    </div>
+    <div>
+      <p>The name is the smallest unit of the thing — one mouthful. Not a ceremony, not a ritual you need permission to perform. Just a good ghoont, made in about forty seconds.</p>
+      <p>We're small. The first run is a hundred tins. We'll get things wrong and post about it when we do, because a brand that only shows you the good days isn't telling you much.</p>
+      <div class="sig">Nagpur में बना — shipped everywhere</div>
+    </div>
+  </div>
+</div></section>
+
+<footer><div class="wrap">
+  <div class="fm"><div class="l">Ghoont</div><div class="d">घूंट</div></div>
+  <div class="fg">
+    <div><h5>Shop</h5><a href="#range">Matcha</a><a href="#range">Hojicha</a><a href="#range">Ube</a><a href="#range">The Kit</a></div>
+    <div><h5>Learn</h5><a href="#brew">How to brew</a><a href="#receipts">Lab reports</a><a href="#story">Our story</a></div>
+    <div><h5>Help</h5><a href="#">Track order</a><a href="#">Shipping</a><a href="#">Returns</a><a href="#">Contact</a></div>
+    <div><h5>Elsewhere</h5><p>hello@ghoont.in</p><p>@ghoont</p><p>Nagpur, Maharashtra</p></div>
+  </div>
+  <div class="fb"><span>© 2026 Ghoont</span><span>FSSAI licence pending · Packed by Zen &amp; Whisk</span></div>
+</div></footer>
+
+<script>
+const s=document.getElementById('s'),t=document.getElementById('t'),v=document.getElementById('v'),vs=document.getElementById('vs');
+function upd(){
+  const n=+s.value;t.innerHTML=n+'<sup>°C</sup>';
+  let h,d;
+  if(n<70){h='Too cold';d='Thin and flat, no foam. The sweetness never comes out.';}
+  else if(n<=82){h='Perfect';d='Sweet, creamy, thick foam. This is what you paid for.';}
+  else if(n<=90){h='Turning bitter';d='Catechins releasing. The astringency starts about here.';}
+  else{h='Grass';d='Scorched. This is the cup that made you think you hate matcha.';}
+  v.childNodes[0].nodeValue=h;vs.textContent=d;
+}
+s.addEventListener('input',upd);upd();
+
+let n=0;const bg=document.getElementById('bag');
+document.querySelectorAll('.add').forEach(b=>b.addEventListener('click',()=>{
+  n++;bg.textContent='Bag ('+n+')';const o=b.textContent;b.textContent='Added';b.classList.add('on');
+  setTimeout(()=>{b.textContent=o;b.classList.remove('on')},1100);
+}));
+
+const tot=document.getElementById('tot');
+document.querySelectorAll('.pick').forEach(p=>p.addEventListener('click',()=>{
+  p.setAttribute('aria-pressed',p.getAttribute('aria-pressed')==='true'?'false':'true');
+  const sel=document.querySelectorAll('.pick[aria-pressed=true]');
+  let sum=0;sel.forEach(x=>sum+=+x.dataset.p);
+  const b=sel.length>=3;if(b)sum=Math.round(sum*0.833);
+  tot.textContent='₹'+sum.toLocaleString('en-IN');
+  const lab=document.createElement('small');
+  lab.textContent=sel.length===0?'Nothing selected yet':b?'Bundle price · '+sel.length+' tins':sel.length+' selected · '+(3-sel.length)+' more for the bundle';
+  tot.appendChild(lab);
+}));
+</script>
+</body>
+</html>
