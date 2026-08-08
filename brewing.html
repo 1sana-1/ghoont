@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Brewing · Ghoont</title>
+<meta name="description" content="Why matcha tastes like grass, and the water temperature that fixes it.">
+<meta property="og:title" content="Brewing · Ghoont">
+<meta property="og:description" content="Why matcha tastes like grass, and the water temperature that fixes it.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anek+Devanagari:wght@400;500;600&family=Instrument+Sans:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<div class="ann">Free shipping over ₹999 &nbsp;·&nbsp; <b>Grind date on every tin</b> &nbsp;·&nbsp; Lab reports published in full</div>
+<header>
+  <div class="wrap hdr">
+    <a class="mark" href="index.html"><span class="l">Ghoont</span><span class="d">घूंट</span></a>
+    <nav class="mn"><a href="shop.html">Shop</a><a href="brewing.html" class=on>Brewing</a><a href="receipts.html">Receipts</a><a href="story.html">Story</a><a href="help.html">Help</a></nav>
+    <div class="hact">
+      <button class="burger" id="burger" aria-expanded="false">Menu</button>
+      <a class="bag" id="bagbtn" href="cart.html">Bag (0)</a>
+    </div>
+  </div>
+  <div class="drawer" id="drawer"><div class="wrap"><a href="shop.html">Shop</a><a href="brewing.html">Brewing</a><a href="receipts.html">Receipts</a><a href="story.html">Story</a><a href="help.html">Help</a><a href="cart.html">Bag</a></div></div>
+</header>
+<main>
+<div class="wrap"><div class="crumb"><a href="index.html">Home</a> · Brewing</div></div>
+<div class="sec"><div class="wrap">
+  <span class="lbl">Brewing</span>
+  <h2 class="h-lg mt6">It's the water, <span class="it">not the tea</span></h2>
+  <p class="lead">Almost every bad cup of matcha in India is a temperature problem. Tencha scorches above 85°C, releasing catechins that taste harsh and grassy. Below 70°C it never gives up its sweetness. The window is narrow and nobody puts it on the packet.</p>
+</div></div>
+<div class="sec sec-t"><div class="wrap"><div class="panel p-teal g2">
+  <div><span class="lbl">Move the dial</span>
+    <h3 class="h-md mt5">Find the window</h3>
+    <div class="hi">घास जैसा लगता है? ग़लत बना है।</div>
+    <p class="lead">No thermometer? Boil the kettle, then wait two minutes with the lid off. That lands you around 78°C almost every time.</p></div>
+  <div class="dial"><div class="deg" id="t">78<sup>°C</sup></div>
+<input type="range" id="s" min="60" max="100" value="78" step="1" aria-label="Water temperature in Celsius">
+<div class="vd" id="v">Perfect<small id="vs">Sweet, creamy, thick foam. This is what you paid for.</small></div></div>
+</div></div></div>
+<div class="sec sec-t"><div class="wrap">
+  <h3 class="h-md">The method, per powder</h3>
+  <div class="rl"><div class="r"><span class="rn">१</span><div><h4>Matcha<em>माचा</em></h4></div><p>Sift 2g through a fine strainer into a wide bowl. Skip this and you get lumps. Heat water to 78°C — boil it, then wait two minutes.</p></div><div class="r"><span class="rn">२</span><div><h4>Hojicha<em>होजिचा</em></h4></div><p>Sift 3g into a bowl or mug. Heat water to about 88°C — hojicha takes hotter water than matcha.</p></div><div class="r"><span class="rn">३</span><div><h4>Ube<em>ऊबे</em></h4></div><p>Whisk 10g with 40ml warm water into a smooth paste. Add 200ml milk, hot or cold. Oat works better than almond here.</p></div><div class="r"><span class="rn">४</span><div><h4>Sachets<em>पुड़िया</em></h4></div><p>Tear one sachet into a mug — no scale needed, it is already 2g. Add 60ml water at 78°C.</p></div></div>
+  <a class="btn gh sm mt16" href="shop.html">Shop the range</a>
+</div></div>
+</main>
+<footer><div class="wrap">
+  <div class="fg">
+    <div class="bm"><div class="l">Ghoont</div><div class="d">घूंट</div>
+      <p>Matcha, hojicha and ube. Sourced honestly, dated on the tin.</p></div>
+    <div><h5>Shop</h5><a href="matcha.html">Matcha</a><a href="hojicha.html">Hojicha</a><a href="ube.html">Ube</a><a href="kit.html">The Kit</a><a href="sachets.html">Sachets</a></div>
+    <div><h5>Learn</h5><a href="brewing.html">How to brew</a><a href="receipts.html">Lab reports</a><a href="story.html">Our story</a></div>
+    <div><h5>Elsewhere</h5><a href="help.html">Help &amp; FAQ</a><span class="li">hello@ghoont.in</span><span class="li">@ghoont</span><span class="li">Nagpur, Maharashtra</span></div>
+  </div>
+  <div class="fb"><span>© 2026 Ghoont</span><span>FSSAI licence pending · Packed by Zen &amp; Whisk</span></div>
+</div></footer>
+<div class="toast" id="toast"></div>
+<script src="assets/app.js"></script>
+</body>
+</html>
